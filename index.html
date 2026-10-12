@@ -1,0 +1,680 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blender — Slow Down. Write a Letter. Find Someone Real.</title>
+  <meta name="description" content="Blender is the letter-first connection app. Say goodbye to swipe fatigue. Meet genuine people through heartfelt anonymous letters and authentic voice calls.">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="assets/logo.png">
+
+  <!-- Tailwind CSS CDN with Custom Theme Config -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            cream: {
+              50: '#FDFBF7',
+              100: '#F8F5EE',
+              200: '#F2EDE2',
+              300: '#E7E0D0',
+              400: '#D5CBB5',
+              800: '#4A463D',
+              900: '#23211C'
+            },
+            onyx: {
+              900: '#0D0D0D',
+              800: '#171717',
+              700: '#262626',
+              600: '#404040'
+            },
+            brand: {
+              pink: '#FF1E6D',
+              pinkHover: '#E0105C',
+              gold: '#C99E58'
+            }
+          },
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            serifLuxury: ['"Newsreader"', 'serif'],
+            display: ['"Cinzel"', 'serif'],
+            monoTag: ['"Space Grotesk"', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- GSAP & ScrollTrigger -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-cream-100 text-onyx-900 selection:bg-brand-pink selection:text-white paper-texture">
+
+  <!-- ============================================================== -->
+  <!-- HERO SECTION: BOLD CONTRAST EDITORIAL DESIGN -->
+  <!-- ============================================================== -->
+  <section class="relative pt-16 md:pt-24 pb-20 md:pb-32 px-4 md:px-8 max-w-7xl mx-auto overflow-hidden">
+    
+    <!-- Hero Header Text Block -->
+    <div class="text-center max-w-4xl mx-auto mb-14 md:mb-20">
+      
+      <!-- Top Badge -->
+      <div class="hero-badge inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-cream-200 border border-cream-300 text-onyx-800 text-xs md:text-sm font-medium mb-6 shadow-sm">
+        <span class="w-2 h-2 rounded-full bg-brand-pink animate-pulse"></span>
+        <span class="font-monoTag uppercase tracking-wider text-[11px] font-bold text-onyx-900">The Anti-Swipe Movement</span>
+        <span class="text-cream-400">|</span>
+        <span class="text-cream-800">Letters First, Photos Never</span>
+      </div>
+
+      <!-- Main High-Fashion Bold Headline -->
+      <h1 class="hero-headline text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-black headline-black tracking-tighter uppercase mb-6">
+        <span>SLOW DOWN.</span><br>
+        <span class="font-serifLuxury italic font-normal text-onyx-800 lowercase tracking-normal">write a letter.</span><br>
+        <span>FIND SOMEONE REAL.</span>
+      </h1>
+
+      <!-- Refined Subtitle -->
+      <p class="hero-subhead text-lg sm:text-xl md:text-2xl text-cream-800 font-normal max-w-2xl mx-auto leading-relaxed mb-10 font-serifLuxury">
+        Escape the exhaustion of superficial profile cards. On <strong class="text-onyx-900 font-semibold font-sans">Blender</strong>, you connect through heartfelt written thoughts and deep voice warmth—without the pressure of cameras or vanity metrics.
+      </p>
+
+      <!-- CTA Action Group -->
+      <div class="hero-cta-group flex flex-col sm:flex-row items-center justify-center gap-4">
+        
+        <!-- Primary Google Play CTA -->
+        <a href="https://play.google.com/store/apps/details?id=com.blender.app&pcampaignid=web_share" target="_blank" rel="noopener noreferrer" class="btn-magnetic w-full sm:w-auto inline-flex items-center justify-center gap-3.5 px-8 py-4 rounded-full bg-onyx-900 text-cream-50 font-bold text-base hover:bg-neutral-800 transition-all shadow-xl group">
+          <svg class="w-5 h-5 fill-current text-brand-pink" viewBox="0 0 24 24">
+            <path d="M3.609 1.814L13.793 12 3.61 22.186c-.378-.344-.61-.837-.61-1.386V3.2c0-.548.232-1.042.61-1.386zm11.242 11.244l2.19 2.19-11.758 6.78 9.568-8.97zm2.977-1.722l2.36 1.362c.706.407.706 1.07 0 1.477l-2.36 1.362-2.327-2.327 2.327-1.874zm-2.977-1.722L5.283 2.016l11.758 6.78-2.19 2.818z"/>
+          </svg>
+          <div class="text-left leading-tight">
+            <div class="text-[10px] uppercase font-monoTag text-cream-400">Available on Android</div>
+            <div class="text-sm md:text-base font-bold">Google Play Store</div>
+          </div>
+          <i data-lucide="arrow-right" class="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform"></i>
+        </a>
+
+        <!-- Secondary Interactive Demo CTA -->
+        <a href="#letters" class="btn-magnetic w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-7 py-4 rounded-full bg-white border border-cream-300 text-onyx-900 font-semibold text-base hover:border-onyx-900 hover:bg-cream-50 transition-all shadow-sm">
+          <i data-lucide="pen-tool" class="w-4 h-4 text-brand-pink"></i>
+          <span>Try Interactive Letter</span>
+        </a>
+      </div>
+
+      <!-- Trust Bar Metrics -->
+      <div class="hero-stats mt-12 pt-8 border-t border-cream-300/80 flex flex-wrap items-center justify-center gap-8 md:gap-14 text-cream-800 text-xs sm:text-sm">
+        <div class="flex items-center gap-2">
+          <i data-lucide="star" class="w-4 h-4 text-amber-600 fill-amber-500"></i>
+          <span class="font-bold text-onyx-900">4.9 / 5.0</span>
+          <span>Community Rating</span>
+        </div>
+        <div class="flex items-center gap-2">
+          <i data-lucide="shield-check" class="w-4 h-4 text-emerald-600"></i>
+          <span class="font-bold text-onyx-900">100% Verified</span>
+          <span>Safe Environment</span>
+        </div>
+        <div class="flex items-center gap-2">
+          <i data-lucide="heart-handshake" class="w-4 h-4 text-brand-pink"></i>
+          <span class="font-bold text-onyx-900">Zero Swipes</span>
+          <span>True Connections</span>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- ============================================================== -->
+    <!-- HERO VISUAL: 3D INTERACTIVE LETTER & APP CARD -->
+    <!-- ============================================================== -->
+    <div class="hero-visual-card max-w-5xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+      
+      <!-- Left Column: The Interactive Letter Simulator -->
+      <div id="letters" class="lg:col-span-7 bg-white p-6 sm:p-8 rounded-3xl border border-cream-300 shadow-xl letter-perspective">
+        
+        <div class="flex items-center justify-between pb-4 mb-4 border-b border-cream-200">
+          <div class="flex items-center gap-2.5">
+            <span class="w-3 h-3 rounded-full bg-brand-pink"></span>
+            <span class="font-monoTag text-xs font-bold uppercase tracking-wider text-onyx-900">Letter Preview</span>
+          </div>
+          <span class="text-xs font-monoTag text-cream-800">#ReadyToBlend</span>
+        </div>
+
+        <!-- Tag Selection Row (Real Feature) -->
+        <div class="mb-5">
+          <label class="block text-xs font-monoTag uppercase tracking-wider text-cream-800 mb-2 font-semibold">Select Topic Tag:</label>
+          <div class="flex flex-wrap gap-2">
+            <button class="letter-tag-btn px-3 py-1.5 rounded-full text-xs font-medium bg-neutral-900 text-white border border-neutral-900 transition-all" data-tag-key="night">🌙 Late Night</button>
+            <button class="letter-tag-btn px-3 py-1.5 rounded-full text-xs font-medium bg-white text-neutral-700 border border-neutral-300 hover:border-neutral-900 transition-all" data-tag-key="poetry">☕ Chai & Poetry</button>
+            <button class="letter-tag-btn px-3 py-1.5 rounded-full text-xs font-medium bg-white text-neutral-700 border border-neutral-300 hover:border-neutral-900 transition-all" data-tag-key="thoughts">💭 Deep Thoughts</button>
+            <button class="letter-tag-btn px-3 py-1.5 rounded-full text-xs font-medium bg-white text-neutral-700 border border-neutral-300 hover:border-neutral-900 transition-all" data-tag-key="music">🎵 Indie Music</button>
+          </div>
+        </div>
+
+        <!-- 3D Letter Paper Surface -->
+        <div id="letterPaper" class="folded-letter-card relative bg-[#FAF7F0] p-6 rounded-2xl border border-cream-300 shadow-inner min-h-[220px] flex flex-col justify-between transition-all">
+          <div>
+            <div class="flex justify-between items-center text-[11px] font-monoTag text-cream-800 mb-3 border-b border-cream-300 pb-2">
+              <span>POSTCARD TO A STRANGER</span>
+              <span id="letterTagDisplay" class="bg-cream-200 px-2 py-0.5 rounded text-onyx-900 font-semibold">🌙 Late Night</span>
+            </div>
+            
+            <p id="letterPreviewText" class="font-serifLuxury text-lg text-onyx-900 leading-relaxed italic">
+              "The city is quiet tonight. What is something you keep thinking about when the rest of the world is asleep?"
+            </p>
+          </div>
+
+          <!-- Wax Seal Stamp (appears on fold) -->
+          <div id="waxSeal" class="hidden absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-16 h-16 rounded-full wax-seal flex items-center justify-center text-white font-display text-xs font-bold border-2 border-white/40 shadow-2xl z-20">
+            BLENDER
+          </div>
+
+          <div class="pt-4 flex justify-between items-center text-xs text-cream-800 border-t border-cream-200 mt-4">
+            <span class="italic font-serifLuxury">Anonymous Soul</span>
+            <span class="font-monoTag text-[11px]">Ready for Blend</span>
+          </div>
+        </div>
+
+        <!-- Optional Live Input for user to test typing -->
+        <div class="mt-4">
+          <input id="letterInput" type="text" placeholder="Type your own opening line to preview..." class="w-full px-4 py-2 text-xs rounded-xl border border-cream-300 bg-cream-50 focus:outline-none focus:ring-2 focus:ring-brand-pink transition-all font-sans text-onyx-900">
+        </div>
+
+        <!-- Action Button -->
+        <div class="mt-5">
+          <a href="https://play.google.com/store/apps/details?id=com.blender.app&pcampaignid=web_share" target="_blank" rel="noopener noreferrer" id="dropIntoBlenderBtn" class="btn-magnetic w-full py-3.5 px-6 rounded-xl bg-brand-pink text-white font-bold text-sm tracking-wide hover:bg-brand-pinkHover transition-all flex items-center justify-center gap-2.5 shadow-lg shadow-brand-pink/25 text-center">
+            <i data-lucide="send" class="w-4 h-4 text-white"></i>
+            <span>Drop into Blender</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Right Column: Real Smartphone Mockup with Real App Screenshot -->
+      <div class="lg:col-span-5 flex flex-col items-center">
+        <div class="relative w-64 sm:w-72 phone-mockup-frame bg-neutral-900 p-2 overflow-hidden">
+          
+          <!-- iPhone Notch / Dynamic Island -->
+          <div class="absolute top-4 left-1/2 -translate-x-1/2 w-24 h-4 bg-black rounded-full z-30"></div>
+
+          <!-- App Screen Container -->
+          <div class="relative rounded-[36px] overflow-hidden aspect-[9/19.5] bg-black">
+            <img id="phoneMockupScreen" src="assets/screen_letter.jpg" alt="Blender Mobile App Screenshot" class="w-full h-full object-cover transition-opacity duration-300">
+            
+            <!-- Floating Badge Over Mockup -->
+            <div class="absolute bottom-5 left-4 right-4 bg-black/85 backdrop-blur-md p-3 rounded-2xl border border-white/10 text-white text-xs">
+              <div class="flex items-center gap-2 mb-1">
+                <span class="w-2 h-2 rounded-full bg-brand-pink animate-ping"></span>
+                <span id="mockupFeatureTitle" class="font-bold text-xs">Handcrafted Letter Feed</span>
+              </div>
+              <p id="mockupFeatureDesc" class="text-[11px] text-neutral-400 leading-snug">
+                Browse letters written by real people looking for genuine depth.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Phone Feature Selector Tabs -->
+        <div class="flex gap-2 mt-6 max-w-sm w-full">
+          <button class="mockup-tab-btn flex-1 py-2 px-3 rounded-lg text-xs font-semibold bg-neutral-900 text-white border border-neutral-900 transition-all text-center" data-index="0">01. Letters</button>
+          <button class="mockup-tab-btn flex-1 py-2 px-3 rounded-lg text-xs font-semibold bg-white text-neutral-700 border border-neutral-300 hover:border-neutral-900 transition-all text-center" data-index="1">02. Audio Calls</button>
+          <button class="mockup-tab-btn flex-1 py-2 px-3 rounded-lg text-xs font-semibold bg-white text-neutral-700 border border-neutral-300 hover:border-neutral-900 transition-all text-center" data-index="2">03. Blender</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================================================== -->
+  <!-- 3. HOW BLENDER WORKS: 3-STEP SERENDIPITY JOURNEY -->
+  <!-- ============================================================== -->
+  <section id="how-it-works" class="py-24 px-4 md:px-8 max-w-7xl mx-auto border-t border-cream-300">
+    
+    <div class="max-w-3xl mb-16">
+      <span class="font-monoTag text-xs font-bold uppercase tracking-wider text-brand-pink block mb-2">The Architecture of Connection</span>
+      <h2 class="text-4xl md:text-5xl font-black headline-black tracking-tight uppercase">
+        Three Steps to a Soul Connection.
+      </h2>
+      <p class="text-cream-800 text-lg font-serifLuxury mt-3">
+        Designed from the ground up to eliminate ghosting, fake vanity, and algorithmic manipulation.
+      </p>
+    </div>
+
+    <div class="cards-stagger-container grid grid-cols-1 md:grid-cols-3 gap-8">
+      
+      <!-- Step 01 -->
+      <div class="stagger-card cream-card p-8 rounded-3xl relative flex flex-col justify-between">
+        <div>
+          <div class="w-12 h-12 rounded-2xl bg-cream-200 border border-cream-300 flex items-center justify-center font-monoTag font-bold text-lg text-onyx-900 mb-6">
+            01
+          </div>
+          <h3 class="text-2xl font-bold text-onyx-900 mb-3 tracking-tight">Pen an Honest Letter</h3>
+          <p class="text-cream-800 text-sm leading-relaxed font-serifLuxury text-base">
+            Write what is genuinely on your mind. Pick a mood tag like <span class="font-sans font-medium text-onyx-900">#ChaiAndPoetry</span> or <span class="font-sans font-medium text-onyx-900">#LateNight</span>. Your face stays hidden; your thoughts take center stage.
+          </p>
+        </div>
+        <div class="mt-8 pt-4 border-t border-cream-200 flex items-center gap-2 text-xs font-monoTag text-cream-800">
+          <i data-lucide="pen" class="w-3.5 h-3.5 text-brand-pink"></i>
+          <span>Authentic vulnerability</span>
+        </div>
+      </div>
+
+      <!-- Step 02 -->
+      <div class="stagger-card cream-card p-8 rounded-3xl relative flex flex-col justify-between">
+        <div>
+          <div class="w-12 h-12 rounded-2xl bg-cream-200 border border-cream-300 flex items-center justify-center font-monoTag font-bold text-lg text-onyx-900 mb-6">
+            02
+          </div>
+          <h3 class="text-2xl font-bold text-onyx-900 mb-3 tracking-tight">The Thoughtful Match</h3>
+          <p class="text-cream-800 text-sm leading-relaxed font-serifLuxury text-base">
+            When another user reads your words and connects with your perspective, you both enter a mutual blend. No rapid-fire swipe addiction—just two minds intrigued by each other.
+          </p>
+        </div>
+        <div class="mt-8 pt-4 border-t border-cream-200 flex items-center gap-2 text-xs font-monoTag text-cream-800">
+          <i data-lucide="sparkles" class="w-3.5 h-3.5 text-brand-pink"></i>
+          <span>Mind-to-mind resonance</span>
+        </div>
+      </div>
+
+      <!-- Step 03 -->
+      <div class="stagger-card cream-card p-8 rounded-3xl relative flex flex-col justify-between bg-white">
+        <div>
+          <div class="w-12 h-12 rounded-2xl bg-cream-200 border border-cream-300 flex items-center justify-center font-monoTag font-bold text-lg text-onyx-900 mb-6">
+            03
+          </div>
+          <h3 class="text-2xl font-bold text-onyx-900 mb-3 tracking-tight">The Voice Blend</h3>
+          <p class="text-cream-800 text-sm leading-relaxed font-serifLuxury text-base">
+            Unlock real-time high-fidelity voice calls. Hear tone, laughter, and silences. After the conversation, rate your encounter to keep the community safe and respectful.
+          </p>
+        </div>
+        <div class="mt-8 pt-4 border-t border-cream-200 flex items-center gap-2 text-xs font-monoTag text-cream-800">
+          <i data-lucide="mic" class="w-3.5 h-3.5 text-brand-pink"></i>
+          <span>WebRTC crystal audio</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================================================== -->
+  <!-- 4. CORE FEATURES: BENTO GRID ON CREAM -->
+  <!-- ============================================================== -->
+  <section id="experience" class="py-24 px-4 md:px-8 max-w-7xl mx-auto border-t border-cream-300">
+    <div class="text-center max-w-3xl mx-auto mb-16">
+      <span class="font-monoTag text-xs font-bold uppercase tracking-wider text-brand-pink block mb-2">Designed for Depth</span>
+      <h2 class="text-4xl md:text-5xl font-black headline-black tracking-tight uppercase">
+        Engineered for Respect & Kindness.
+      </h2>
+      <p class="text-cream-800 text-lg font-serifLuxury mt-3">
+        Every feature in Blender is built to protect your peace of mind and elevate the quality of people you meet.
+      </p>
+    </div>
+
+    <!-- Bento Grid Container -->
+    <div class="grid grid-cols-1 md:grid-cols-12 gap-6">
+      
+      <!-- Bento 1: Strict 5.0 Star System & Jail (Large 8 col) -->
+      <div class="md:col-span-8 cream-card p-8 md:p-10 rounded-3xl flex flex-col justify-between">
+        <div class="max-w-xl">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-cream-200 text-onyx-900 text-xs font-bold font-monoTag mb-4">
+            <i data-lucide="shield-alert" class="w-3.5 h-3.5 text-brand-pink"></i>
+            <span>ANTI-TOXICITY PROTOCOL</span>
+          </div>
+          <h3 class="text-3xl font-bold text-onyx-900 mb-4 tracking-tight">The 5-Star Honor System & Auto-Jail</h3>
+          <p class="text-cream-800 font-serifLuxury text-lg leading-relaxed">
+            Every user starts with a pristine 5.00 rating. If someone behaves inappropriately or speaks disrespectfully, their rating plummets. Any rating below 2.0 triggers an instant <strong>48-Hour Community Jail</strong> suspension.
+          </p>
+        </div>
+
+        <div class="mt-8 grid grid-cols-1 sm:grid-cols-3 gap-4 pt-6 border-t border-cream-200">
+          <div class="bg-cream-100 p-4 rounded-2xl">
+            <div class="text-2xl font-black text-onyx-900">5.00 ★</div>
+            <div class="text-xs text-cream-800 mt-1">Starting Honor Rating</div>
+          </div>
+          <div class="bg-cream-100 p-4 rounded-2xl">
+            <div class="text-2xl font-black text-brand-pink">&lt; 2.00 ★</div>
+            <div class="text-xs text-cream-800 mt-1">Automatic Jail Ban</div>
+          </div>
+          <div class="bg-cream-100 p-4 rounded-2xl">
+            <div class="text-2xl font-black text-emerald-700">98.4%</div>
+            <div class="text-xs text-cream-800 mt-1">Polite Encounters</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bento 2: VIP Club Benefits (4 col) -->
+      <div class="md:col-span-4 bg-onyx-900 text-white p-8 md:p-10 rounded-3xl flex flex-col justify-between shadow-2xl relative overflow-hidden">
+        <div class="relative z-10">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 text-brand-pink text-xs font-bold font-monoTag mb-4">
+            <i data-lucide="crown" class="w-3.5 h-3.5"></i>
+            <span>VIP PASS ACCESS</span>
+          </div>
+          <h3 class="text-3xl font-bold text-white mb-4 tracking-tight">Blender VIP Club</h3>
+          <p class="text-neutral-300 font-serifLuxury text-base leading-relaxed">
+            Ready to dive deeper? Unlock unlimited blends, a golden member crown, priority matching queues, and 3-Day Weekend Passes for uninterrupted connection.
+          </p>
+        </div>
+
+        <div class="relative z-10 mt-8 pt-6 border-t border-white/10 flex items-center justify-between">
+          <div>
+            <div class="text-xs text-neutral-400">Google Play Billing</div>
+            <div class="text-sm font-bold text-white">Instant Activation</div>
+          </div>
+          <a href="#download" class="w-10 h-10 rounded-full bg-brand-pink flex items-center justify-center text-white hover:scale-105 transition-transform">
+            <i data-lucide="arrow-up-right" class="w-5 h-5"></i>
+          </a>
+        </div>
+      </div>
+
+      <!-- Bento 3: Verified Badges & Selfie Verification (4 col) -->
+      <div class="md:col-span-4 cream-card p-8 rounded-3xl flex flex-col justify-between">
+        <div>
+          <div class="w-10 h-10 rounded-xl bg-cream-200 flex items-center justify-center mb-6">
+            <i data-lucide="user-check" class="w-5 h-5 text-emerald-600"></i>
+          </div>
+          <h3 class="text-2xl font-bold text-onyx-900 mb-3 tracking-tight">Verified Human Souls</h3>
+          <p class="text-cream-800 font-serifLuxury text-base leading-relaxed">
+            Zero bots. Zero stolen pictures. Our live selfie camera verification ensures that the person on the other end of the letter is authentic.
+          </p>
+        </div>
+        <div class="mt-6 pt-4 border-t border-cream-200 text-xs font-monoTag text-emerald-700 font-bold">
+          ✓ Verified badge on profile
+        </div>
+      </div>
+
+      <!-- Bento 4: Direct Chat & Lasting Bonds (8 col) -->
+      <div class="md:col-span-8 cream-card p-8 md:p-10 rounded-3xl flex flex-col justify-between">
+        <div>
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-cream-200 text-onyx-900 text-xs font-bold font-monoTag mb-4">
+            <i data-lucide="message-square" class="w-3.5 h-3.5 text-brand-pink"></i>
+            <span>CONNECTIONS & MEMORIES</span>
+          </div>
+          <h3 class="text-3xl font-bold text-onyx-900 mb-4 tracking-tight">From Call to Lifelong Connection</h3>
+          <p class="text-cream-800 font-serifLuxury text-lg leading-relaxed">
+            Enjoyed the voice call? Both users can mutually accept a friendship request to unlock encrypted 1-on-1 direct messaging, saving letters and continuing the conversation anytime.
+          </p>
+        </div>
+
+        <div class="mt-8 pt-6 border-t border-cream-200 flex flex-wrap gap-4 text-xs font-monoTag text-cream-800">
+          <span class="bg-cream-100 px-3 py-1.5 rounded-full">✓ End-to-end realtime messages</span>
+          <span class="bg-cream-100 px-3 py-1.5 rounded-full">✓ Call duration logs</span>
+          <span class="bg-cream-100 px-3 py-1.5 rounded-full">✓ Mutual opt-in only</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================================================== -->
+  <!-- 5. EDITORIAL / BLOG SECTION -->
+  <!-- ============================================================== -->
+  <section id="stories" class="py-24 px-4 md:px-8 max-w-7xl mx-auto border-t border-cream-300">
+    <div class="flex flex-col md:flex-row justify-between items-start md:items-end mb-16 gap-6">
+      <div class="max-w-2xl">
+        <span class="font-monoTag text-xs font-bold uppercase tracking-wider text-brand-pink block mb-2">The Blender Journal</span>
+        <h2 class="text-4xl md:text-5xl font-black headline-black tracking-tight uppercase">
+          Reflections on Modern Connection.
+        </h2>
+        <p class="text-cream-800 text-lg font-serifLuxury mt-3">
+          Essays and thought pieces exploring dating psychology, conversation craft, and the return of intentional intimacy.
+        </p>
+      </div>
+      <a href="#download" class="inline-flex items-center gap-2 text-sm font-bold text-onyx-900 hover:text-brand-pink transition-colors">
+        <span>Read in App</span>
+        <i data-lucide="arrow-right" class="w-4 h-4"></i>
+      </a>
+    </div>
+
+    <!-- Editorial Cards Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      
+      <!-- Article 1 -->
+      <article class="cream-card rounded-3xl overflow-hidden flex flex-col justify-between group">
+        <div class="p-8">
+          <div class="flex items-center justify-between text-xs font-monoTag text-cream-800 mb-4">
+            <span class="bg-cream-200 px-2.5 py-1 rounded-full text-onyx-900 font-semibold">CULTURE</span>
+            <span>4 min read</span>
+          </div>
+          <h3 class="text-2xl font-bold text-onyx-900 mb-3 group-hover:text-brand-pink transition-colors leading-snug">
+            Why Slow Connections Beat 100 Fast Swipes in 2026
+          </h3>
+          <p class="text-cream-800 font-serifLuxury text-base leading-relaxed">
+            The neuroscience of choice overload: why infinite options make us lonelier and how intentional letters restore human empathy.
+          </p>
+        </div>
+        <div class="px-8 pb-8 pt-4 border-t border-cream-200">
+          <button class="read-article-btn text-xs font-bold text-onyx-900 uppercase tracking-wider flex items-center gap-2 group-hover:gap-3 transition-all" data-article-id="1">
+            <span>Read Essay</span>
+            <i data-lucide="arrow-up-right" class="w-4 h-4 text-brand-pink"></i>
+          </button>
+        </div>
+      </article>
+
+      <!-- Article 2 -->
+      <article class="cream-card rounded-3xl overflow-hidden flex flex-col justify-between group">
+        <div class="p-8">
+          <div class="flex items-center justify-between text-xs font-monoTag text-cream-800 mb-4">
+            <span class="bg-cream-200 px-2.5 py-1 rounded-full text-onyx-900 font-semibold">PSYCHOLOGY</span>
+            <span>5 min read</span>
+          </div>
+          <h3 class="text-2xl font-bold text-onyx-900 mb-3 group-hover:text-brand-pink transition-colors leading-snug">
+            The Lost Art of Vulnerability in a Hyper-Curated World
+          </h3>
+          <p class="text-cream-800 font-serifLuxury text-base leading-relaxed">
+            When you remove the vanity mirror of photo galleries, people finally speak their honest minds without performative theater.
+          </p>
+        </div>
+        <div class="px-8 pb-8 pt-4 border-t border-cream-200">
+          <button class="read-article-btn text-xs font-bold text-onyx-900 uppercase tracking-wider flex items-center gap-2 group-hover:gap-3 transition-all" data-article-id="2">
+            <span>Read Essay</span>
+            <i data-lucide="arrow-up-right" class="w-4 h-4 text-brand-pink"></i>
+          </button>
+        </div>
+      </article>
+
+      <!-- Article 3 -->
+      <article class="cream-card rounded-3xl overflow-hidden flex flex-col justify-between group">
+        <div class="p-8">
+          <div class="flex items-center justify-between text-xs font-monoTag text-cream-800 mb-4">
+            <span class="bg-cream-200 px-2.5 py-1 rounded-full text-onyx-900 font-semibold">SAFETY</span>
+            <span>3 min read</span>
+          </div>
+          <h3 class="text-2xl font-bold text-onyx-900 mb-3 group-hover:text-brand-pink transition-colors leading-snug">
+            How a 5.0 Star Rating System Eradicated Toxic Behavior
+          </h3>
+          <p class="text-cream-800 font-serifLuxury text-base leading-relaxed">
+            Behind the engineering of Blender’s automatic community moderation: giving good people a safe sanctuary.
+          </p>
+        </div>
+        <div class="px-8 pb-8 pt-4 border-t border-cream-200">
+          <button class="read-article-btn text-xs font-bold text-onyx-900 uppercase tracking-wider flex items-center gap-2 group-hover:gap-3 transition-all" data-article-id="3">
+            <span>Read Essay</span>
+            <i data-lucide="arrow-up-right" class="w-4 h-4 text-brand-pink"></i>
+          </button>
+        </div>
+      </article>
+    </div>
+  </section>
+
+
+  <!-- ============================================================== -->
+  <!-- 6. BLENDER RETRO ARCADE -->
+  <!-- ============================================================== -->
+  <section id="arcade" class="py-24 px-4 md:px-8 max-w-4xl mx-auto border-t border-cream-300">
+    <div class="text-center mb-12">
+      <span class="font-monoTag text-xs font-bold uppercase tracking-wider text-brand-pink block mb-2">Leisure & Play</span>
+      <h2 class="text-4xl md:text-5xl font-black headline-black tracking-tight uppercase">
+        Retro Snake Arcade.
+      </h2>
+      <p class="text-cream-800 text-lg font-serifLuxury mt-3 max-w-xl mx-auto">
+        Waiting for your next letter to blend? Eat fruits, grow your snake, and see how long you can last.
+      </p>
+    </div>
+
+    <!-- Retro Snake Arcade Container -->
+    <div id="snakeContainer" class="cream-card rounded-3xl p-6 sm:p-10 flex flex-col items-center max-w-lg mx-auto shadow-xl">
+      <div class="w-full flex items-center justify-between pb-4 mb-5 border-b border-cream-200">
+        <div class="flex items-center gap-2">
+          <span class="w-3 h-3 rounded-full bg-brand-pink animate-pulse"></span>
+          <span class="font-monoTag text-xs font-bold uppercase text-onyx-900">Blender Classic Snake</span>
+        </div>
+        <div class="flex items-center gap-4 text-xs font-monoTag">
+          <div>Score: <span id="snakeScore" class="font-bold text-brand-pink text-sm">0</span></div>
+          <div>Speed: <span id="snakeSpeedDisplay" class="font-bold text-neutral-600">1.0x</span></div>
+          <div>Best: <span id="snakeHighScore" class="font-bold text-onyx-900 text-sm">0</span></div>
+        </div>
+      </div>
+
+      <!-- Canvas Arcade Screen -->
+      <div class="relative bg-neutral-900 rounded-2xl p-2.5 border-4 border-neutral-800 shadow-2xl overflow-hidden">
+        <canvas id="snakeCanvas" width="340" height="340" class="rounded-xl block"></canvas>
+        
+        <!-- Game Over Overlay -->
+        <div id="snakeGameOverOverlay" class="hidden absolute inset-0 bg-black/85 backdrop-blur-sm flex flex-col items-center justify-center text-white text-center p-4">
+          <div class="text-3xl font-black text-brand-pink font-monoTag mb-1">GAME OVER</div>
+          <p class="text-xs text-neutral-300 mb-4">Final Score: <span id="finalScoreText" class="font-bold text-white">0</span></p>
+          <button id="snakeRestartBtn" class="px-6 py-2.5 rounded-full bg-brand-pink hover:bg-brand-pinkHover text-white font-bold text-xs font-monoTag tracking-wide transition-all shadow-lg">
+            Play Again
+          </button>
+        </div>
+
+        <!-- Start Overlay -->
+        <div id="snakeStartOverlay" class="absolute inset-0 bg-black/75 backdrop-blur-xs flex flex-col items-center justify-center text-white text-center p-4">
+          <div class="text-2xl font-bold font-monoTag mb-2">Eat Fruits & Grow!</div>
+          <p class="text-xs text-neutral-400 mb-4">Speed increases as your snake grows</p>
+          <button id="snakeStartBtn" class="px-6 py-2.5 rounded-full bg-brand-pink hover:bg-brand-pinkHover text-white font-bold text-xs font-monoTag tracking-wide transition-all shadow-lg">
+            Start Game
+          </button>
+        </div>
+      </div>
+
+      <!-- Mobile Touch Controls (D-pad) -->
+      <div class="mt-6 flex flex-col items-center gap-2">
+        <button id="ctrlUp" class="w-12 h-12 rounded-xl bg-cream-200 hover:bg-cream-300 text-onyx-900 font-bold flex items-center justify-center active:scale-95 transition-transform border border-cream-300 shadow-sm" aria-label="Up">
+          <i data-lucide="arrow-up" class="w-5 h-5"></i>
+        </button>
+        <div class="flex gap-4">
+          <button id="ctrlLeft" class="w-12 h-12 rounded-xl bg-cream-200 hover:bg-cream-300 text-onyx-900 font-bold flex items-center justify-center active:scale-95 transition-transform border border-cream-300 shadow-sm" aria-label="Left">
+            <i data-lucide="arrow-left" class="w-5 h-5"></i>
+          </button>
+          <button id="ctrlDown" class="w-12 h-12 rounded-xl bg-cream-200 hover:bg-cream-300 text-onyx-900 font-bold flex items-center justify-center active:scale-95 transition-transform border border-cream-300 shadow-sm" aria-label="Down">
+            <i data-lucide="arrow-down" class="w-5 h-5"></i>
+          </button>
+          <button id="ctrlRight" class="w-12 h-12 rounded-xl bg-cream-200 hover:bg-cream-300 text-onyx-900 font-bold flex items-center justify-center active:scale-95 transition-transform border border-cream-300 shadow-sm" aria-label="Right">
+            <i data-lucide="arrow-right" class="w-5 h-5"></i>
+          </button>
+        </div>
+        <div class="text-[11px] font-monoTag text-cream-800 mt-2">Use keyboard arrow keys or touch buttons above</div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================================================== -->
+  <!-- 7. DOWNLOAD CALL TO ACTION BANNER -->
+  <!-- ============================================================== -->
+  <section id="download" class="py-24 px-4 md:px-8 max-w-7xl mx-auto">
+    <div class="bg-onyx-900 text-cream-50 rounded-[40px] p-8 sm:p-14 md:p-20 relative overflow-hidden shadow-2xl border border-neutral-800">
+      
+      <!-- Ambient Hot Pink Brand Glow -->
+      <div class="absolute -top-32 -right-32 w-96 h-96 rounded-full bg-brand-pink/20 blur-3xl pointer-events-none"></div>
+
+      <div class="max-w-3xl relative z-10">
+        <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/10 text-brand-pink text-xs font-monoTag uppercase tracking-wider font-bold mb-6">
+          <span>READY FOR SOMETHING REAL?</span>
+        </div>
+
+        <h2 class="text-4xl sm:text-5xl md:text-6xl font-black headline-black text-white tracking-tighter uppercase mb-6 leading-tight">
+          Write your first letter tonight.
+        </h2>
+
+        <p class="text-neutral-300 font-serifLuxury text-lg sm:text-xl leading-relaxed mb-10 max-w-xl">
+          Join thousands of thoughtful people having authentic, respectful conversations on Blender. Available now for Android.
+        </p>
+
+        <!-- Download Buttons -->
+        <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-4">
+          <a href="https://play.google.com/store/apps/details?id=com.blender.app&pcampaignid=web_share" target="_blank" rel="noopener noreferrer" class="btn-magnetic inline-flex items-center justify-center gap-3.5 px-8 py-4 rounded-full bg-brand-pink text-white font-bold text-base hover:bg-brand-pinkHover transition-all shadow-xl group">
+            <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
+              <path d="M3.609 1.814L13.793 12 3.61 22.186c-.378-.344-.61-.837-.61-1.386V3.2c0-.548.232-1.042.61-1.386zm11.242 11.244l2.19 2.19-11.758 6.78 9.568-8.97zm2.977-1.722l2.36 1.362c.706.407.706 1.07 0 1.477l-2.36 1.362-2.327-2.327 2.327-1.874zm-2.977-1.722L5.283 2.016l11.758 6.78-2.19 2.818z"/>
+            </svg>
+            <div class="text-left leading-tight">
+              <div class="text-[10px] uppercase font-monoTag text-pink-200">Get it on</div>
+              <div class="text-sm md:text-base font-bold">Google Play Store</div>
+            </div>
+            <i data-lucide="arrow-right" class="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform"></i>
+          </a>
+
+          <div class="inline-flex items-center gap-3 px-6 py-4 rounded-full bg-white/5 border border-white/10 text-neutral-300 text-xs font-monoTag justify-center">
+            <i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-400"></i>
+            <span>Version 1.0.3 • Clean Build</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================================================== -->
+  <!-- 8. FOOTER -->
+  <!-- ============================================================== -->
+  <footer class="py-16 px-4 md:px-8 max-w-7xl mx-auto border-t border-cream-300 text-cream-800">
+    <div class="flex flex-col md:flex-row justify-between items-center gap-8">
+      
+      <div class="flex items-center gap-3">
+        <div class="w-9 h-9 rounded-full bg-onyx-900 flex items-center justify-center p-1.5 shadow-sm">
+          <img src="assets/logo.png" alt="Blender" class="w-full h-full object-contain">
+        </div>
+        <div>
+          <div class="font-bold font-display text-base text-onyx-900">BLENDER</div>
+          <div class="text-[11px] text-cream-800">Handcrafted Connections &copy; 2026</div>
+        </div>
+      </div>
+
+      <div class="flex flex-wrap gap-6 text-xs font-monoTag text-cream-800">
+        <a href="#letters" class="hover:text-onyx-900">Letters</a>
+        <a href="#how-it-works" class="hover:text-onyx-900">How It Works</a>
+        <a href="#stories" class="hover:text-onyx-900">Journal</a>
+        <a href="#faq" class="hover:text-onyx-900">FAQ</a>
+        <a href="#" class="hover:text-onyx-900">Privacy Policy</a>
+        <a href="#" class="hover:text-onyx-900">Terms of Service</a>
+      </div>
+
+      <div class="text-xs font-serifLuxury italic">
+        "Letters that bring souls closer."
+      </div>
+    </div>
+  </footer>
+
+
+  <!-- ============================================================== -->
+  <!-- 9. ARTICLE MODAL (FOR EDITORIAL JOURNAL) -->
+  <!-- ============================================================== -->
+  <div id="blogModal" class="fixed inset-0 bg-black/60 backdrop-blur-sm z-50 hidden items-center justify-center p-4">
+    <div class="bg-white rounded-3xl p-6 sm:p-10 max-w-2xl w-full border border-cream-300 shadow-2xl relative max-h-[85vh] overflow-y-auto">
+      <button id="closeBlogModal" class="absolute top-6 right-6 p-2 rounded-full hover:bg-cream-100 text-onyx-900 transition-colors" aria-label="Close Modal">
+        <i data-lucide="x" class="w-5 h-5"></i>
+      </button>
+      
+      <span class="font-monoTag text-xs font-bold uppercase tracking-wider text-brand-pink block mb-2">Blender Journal</span>
+      <h3 id="modalArticleTitle" class="text-2xl sm:text-3xl font-bold text-onyx-900 mb-6 leading-tight"></h3>
+      <div id="modalArticleContent" class="text-cream-800 font-serifLuxury text-base sm:text-lg leading-relaxed space-y-4"></div>
+      
+      <div class="mt-8 pt-6 border-t border-cream-200 flex justify-end">
+        <a href="#download" class="px-5 py-2.5 rounded-full bg-onyx-900 text-white text-xs font-bold font-monoTag hover:bg-neutral-800 transition-all">
+          Download Blender App
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Custom App JS -->
+  <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,176 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700;800&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,600;1,6..72,400;1,6..72,600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap');
+
+:root {
+  --bg-cream: #F8F5EE;
+  --bg-cream-tint: #F2EDE2;
+  --bg-card: #FFFFFF;
+  --text-black: #111111;
+  --text-muted: #5A564F;
+  --text-subtle: #878177;
+  --border-cream: #E4DEC3;
+  --border-subtle: #EBE5D8;
+  --brand-pink: #FF1E6D;
+  --brand-pink-hover: #E0105C;
+  --brand-pink-glow: rgba(255, 30, 109, 0.25);
+  --warm-gold: #C99E58;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--bg-cream);
+  color: var(--text-black);
+  font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-image: radial-gradient(rgba(180, 165, 140, 0.15) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+/* Typography Classes */
+.font-serif-luxury {
+  font-family: 'Newsreader', serif;
+}
+
+.font-display {
+  font-family: 'Cinzel', serif;
+}
+
+.font-mono-tag {
+  font-family: 'Space Grotesk', sans-serif;
+}
+
+/* Subtle Film Grain / Paper Texture */
+.paper-texture {
+  position: relative;
+  background: var(--bg-cream);
+}
+
+.paper-texture::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0.035;
+  pointer-events: none;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #F2ECE0;
+}
+::-webkit-scrollbar-thumb {
+  background: #CFC5B4;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #A89D8B;
+}
+
+/* Glassmorphism on Cream */
+.cream-glass {
+  background: rgba(255, 255, 255, 0.78);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(228, 222, 195, 0.8);
+}
+
+.cream-card {
+  background: #FFFFFF;
+  border: 1px solid var(--border-cream);
+  box-shadow: 0 4px 24px -2px rgba(44, 38, 28, 0.05), 0 1px 2px rgba(44, 38, 28, 0.03);
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.cream-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 36px -6px rgba(44, 38, 28, 0.09), 0 4px 12px rgba(44, 38, 28, 0.04);
+  border-color: #D3CAA8;
+}
+
+/* High Fashion Headline Gradient / Styling */
+.headline-black {
+  color: #0D0D0D;
+  letter-spacing: -0.035em;
+  line-height: 1.04;
+}
+
+.text-stroke-cream {
+  -webkit-text-stroke: 1px rgba(0, 0, 0, 0.2);
+  color: transparent;
+}
+
+/* 3D Folding Letter CSS */
+.letter-perspective {
+  perspective: 1200px;
+}
+
+.folded-letter-card {
+  transform-style: preserve-3d;
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.wax-seal {
+  background: radial-gradient(circle at 35% 35%, #FF337E, #C80D4B);
+  box-shadow: 0 6px 14px rgba(200, 13, 75, 0.38), inset 0 2px 4px rgba(255, 255, 255, 0.4), inset 0 -2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* Pulsing Hot Pink Glow */
+.brand-glow {
+  box-shadow: 0 0 35px var(--brand-pink-glow);
+}
+
+/* Magnetic Button Feel */
+.btn-magnetic {
+  position: relative;
+  transition: transform 0.25s cubic-bezier(0.2, 0, 0, 1), box-shadow 0.25s ease;
+}
+.btn-magnetic:active {
+  transform: scale(0.97);
+}
+
+/* Mockup Frame */
+.phone-mockup-frame {
+  box-shadow: 0 30px 60px -15px rgba(20, 18, 14, 0.22), 
+              0 0 0 12px #18181A, 
+              0 0 0 14px rgba(255, 255, 255, 0.35);
+  border-radius: 44px;
+}
+
+/* Subtle Shimmer for Highlighting */
+@keyframes warmShimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+.shimmer-badge {
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.8) 50%, rgba(255, 255, 255, 0) 100%);
+  background-size: 200% 100%;
+  animation: warmShimmer 3.5s infinite;
+}
+
+/* Accordion Smooth Transition */
+.accordion-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.3s ease;
+  opacity: 0;
+}
+
+.accordion-item.active .accordion-content {
+  max-height: 380px;
+  opacity: 1;
+}
+
+.accordion-item.active .accordion-icon {
+  transform: rotate(180deg);
+}
